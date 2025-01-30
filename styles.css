@@ -178,7 +178,7 @@ body {
     gap: 20px;
 }
 
-.project-card {
+.project-card{
     background-color: white;
     padding: 20px;
     border-left: 10px solid goldenrod;
@@ -187,7 +187,10 @@ body {
 .announcements {
     grid-rows: 1/1;
     grid-column: 2/2;
-    display: grid;
+}
+
+.sub-wrapper {
+    display:grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
@@ -208,4 +211,13 @@ button {
     margin: 16px;
     font-size: large;
     font-style: bold;
+}
+
+.sub-card {
+    background-color: white;
+    padding: 16px;
+}
+
+.sub-card p, .project-card p {
+    color: grey;
 }
