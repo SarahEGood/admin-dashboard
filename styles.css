@@ -1,8 +1,10 @@
-body {
+html, body {
     margin: 0px;
     padding: 0px;
     font-family: 'NotoSans', Arial, Helvetica, sans-serif;
     background-color: lightgrey;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -19,25 +21,23 @@ body {
 .sidebar {
     grid-column: 1 / 1;
     grid-row: 1 / 4;
-    display:grid;
-    grid-template-rows: 1fr 18fr;
     background-color: rgb(41, 180, 255);
     padding: 16px;
     color: white;
     font-weight: bold;
+    min-height: 100vh;
 }
 
 .sidebar-header {
     display: grid;
-    grid-rows: 1/1;
+    grid-row: 1/1;
     grid-template-columns: 1fr 4fr;
     padding-bottom: 20px;
 }
 
 .sidebar-nav {
-    display: grid;
     padding: 0px;
-    height: 1em;
+    height: 1.5em;
 }
 
 .sidebar-spacer {
@@ -149,16 +149,17 @@ body {
 }
 
 .main-contents {
-    grid-row: 2/3;
+    grid-row: 2/4;
     grid-column: 2/2;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     margin-top: 30px;
+    min-height: 100vh;
 }
 
 .your-projects {
-    grid-rows: 1/2;
+    grid-row: 1/2;
     grid-column: 1/1;
     padding: 16px;
 }
@@ -185,7 +186,7 @@ body {
 }
 
 .announcements {
-    grid-rows: 1/1;
+    grid-row: 1/1;
     grid-column: 2/2;
 }
 
@@ -195,7 +196,7 @@ body {
 }
 
 .trending {
-    grid-rows: 2/2;
+    grid-row: 2/2;
     grid-column: 2/2;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -216,6 +217,7 @@ button {
 .sub-card {
     background-color: white;
     padding: 16px;
+    margin: 16px;
 }
 
 .sub-card p, .project-card p {
