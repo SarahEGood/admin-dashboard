@@ -1,0 +1,56 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr 5fr 5fr;
+}
+
+.sidebar {
+    grid-column: 1 / 1;
+    grid-row: 1 / 4;
+    display:grid;
+}
+
+.header {
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 2/2;
+    grid-template-rows: 1fr 2fr;
+}
+
+.searchbar {
+    grid-row: 1/1;
+}
+
+.welcomebar {
+    grid-row: 2/2;
+}
+
+.main-contents {
+    grid-row: 3/4;
+    grid-column: 2/2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.your-projects {
+    grid-rows: 1/2;
+    grid-column: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.announcements {
+    grid-rows: 1/1;
+    grid-column: 2/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.trending {
+    grid-rows: 2/2;
+    grid-column: 2/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
