@@ -1,11 +1,17 @@
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'NotoSans', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('resources/NotoSans-VariableFont_wdth\,wght.ttf');
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 2fr 5fr 5fr;
 }
 
@@ -13,17 +19,28 @@ body {
     grid-column: 1 / 1;
     grid-row: 1 / 4;
     display:grid;
-    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-rows: 1fr 18fr;
     background-color: rgb(41, 180, 255);
     padding: 16px;
     color: white;
+    font-weight: bold;
 }
 
 .sidebar-header {
     display: grid;
     grid-rows: 1/1;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     padding-bottom: 20px;
+}
+
+.sidebar-nav {
+    display: grid;
+    padding: 0px;
+    height: 1em;
+}
+
+.sidebar-spacer {
+    padding: 1rem;
 }
 
 .sidebar-row {
@@ -63,12 +80,68 @@ body {
     grid-template-rows: 1fr 2fr;
 }
 
+#dashboard-icon img{
+    height: min(100%, 50px);
+    width: min(100%, 50px);
+}
+
+.sidebar-icon img, .search-icon img, .search-profile img,
+    .notification-icon img {
+    height: min(100%, 25px);
+    width: min(100%, 25px);
+}
+
 .searchbar {
     grid-row: 1/1;
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr 3fr;
+    padding: 16px;
+}
+
+.search-icon {
+    grid-column: 1/1;
+    padding: 4px;
+}
+
+.search-bar {
+    grid-column: 2/2;
+}
+
+.search-bar input[type="text"] {
+    border-radius: 4px;
+}
+
+.notification-icon {
+    grid-column: 3/3;
+}
+
+.search-profile {
+    grid-column-start: 4;
 }
 
 .welcomebar {
+    display:grid;
     grid-row: 2/2;
+    grid-template-columns: 1fr 5fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.welcome-icon {
+    padding: 20px;
+    grid-column: 1/1;
+}
+
+.welcome-icon img{
+    height: min(100%, 200px);
+    width: min(100%, 200px);
+}
+
+.welcome-text {
+    grid-columns: 2/2;
+}
+
+.welcome-buttons {
+    grid-columns: 3/3;
 }
 
 .main-contents {
@@ -101,12 +174,14 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-#dashboard-icon img {
-    height: min(100%, 50px);
-    width: min(100%, 50px);
-}
-
-.sidebar-icon {
-    height: min(100%, 25px);
-    width: min(100%, 25px);
+button {
+    background-color: rgb(41, 180, 255);
+    color: white;
+    border-radius: 32px;
+    font-family: 'NotoSans', Arial, Helvetica, sans-serif;
+    border: none;
+    padding:15px 32px;
+    margin: 16px;
+    font-size: large;
+    font-style: bold;
 }
