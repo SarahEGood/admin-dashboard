@@ -113,6 +113,22 @@ html, body {
 
 .search-bar input[type="text"] {
     border-radius: 4px;
+    width: 100%;
+    background-color: lightgrey;
+    border:none;
+    border-radius: 32px;
+    padding: 5px;
+    font-size: medium;
+}
+
+.search-profile {
+    grid-column: 3/4;
+    text-align: right;
+}
+
+.search-profile img {
+    display: inline;
+    margin-left:auto;
 }
 
 .notification-icon {
@@ -216,10 +232,14 @@ button {
 
 .sub-card {
     background-color: white;
+    border-top: 1px solid lightgrey;
     padding: 16px;
-    margin: 16px;
 }
 
 .sub-card p, .project-card p {
     color: grey;
+}
+
+.search-profile img {
+    padding-right: 10px;
 }
